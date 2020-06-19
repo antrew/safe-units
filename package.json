@@ -35,7 +35,7 @@
         "lint": "npm-run-all -p lint:codegen lint:docs lint:src lint:dist lint:types",
         "node:codegen": "node codegen/dist/emit",
         "node:docs": "node docsgen/dist/index",
-        "test": "jest --config jest.config.json",
+        "test": "jest",
         "prepack": "yarn clean && yarn build",
         "verify": "npm-run-all -s build lint test docs"
     },
