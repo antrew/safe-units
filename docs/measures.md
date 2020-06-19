@@ -412,6 +412,12 @@ elapsed.in(minutes); // 1 min
 rate.in(poundsPerSecond); // 1 £/s
 ```
 
+## 
+
+// TODO document valueIn here
+
+
+
 ## Function Wrappers
 
 It is often desirable to convert operations on numbers into operations on measures. Frequently, these functions make no change on the unit of a value. For example, suppose we want to make an absolute value function that operates on measures. We'd expect the function perserve the unit of the input. We can simply wrap an existing absolute value function using `wrapUnaryFn`:
