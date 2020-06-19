@@ -197,6 +197,11 @@ export interface GenericMeasure<N, U extends Unit> {
     toString(formatter?: MeasureFormatter<N>): string;
 
     /**
+     * Returns the numeric value of this measure in given units.
+     */
+    valueIn(unit: GenericMeasure<N, U>): N;
+
+    /**
      * Formats this measure as a product of another unit. If the given unit has a symbol, this will format as a number
      * followed by that symbol. If not, this is equivalent to calling `toString()`.
      * @param a unit to be used to represent this measure

@@ -1,3 +1,4 @@
+import { feet } from "../../unit";
 import { MeasureFormatter } from "../genericMeasure";
 import { Measure } from "../numberMeasure";
 
@@ -357,6 +358,13 @@ describe("Number measures", () => {
                     formatUnit: () => "meters",
                 }),
             ).toBe("20000 meters");
+        });
+    });
+
+    describe("unit conversion", () => {
+        it("should return numeric value in different units", () => {
+            expect(Measure.of(100, feet).valueIn(feet)).toEqual(100);
+            expect(Measure.of(1, meters).valueIn(feet)).toEqual(4);
         });
     });
 

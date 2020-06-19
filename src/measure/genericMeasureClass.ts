@@ -138,6 +138,10 @@ export function createMeasureClass<N>(num: NumericOperations<N>): GenericMeasure
             return `${formatValue(this.value)} ${formatUnit(this.unit)}`.trimRight();
         }
 
+        public valueIn(unit: GenericMeasure<N, U>): N {
+            return num.div(this.value, unit.value);
+        }
+
         public in(unit: GenericMeasure<N, U>, formatter?: MeasureFormatter<N>): string {
             if (unit.symbol === undefined) {
                 return this.toString(formatter);
